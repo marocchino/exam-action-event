@@ -1,0 +1,10 @@
+name: Exam PR
+on: pull_request
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log github
+        run: echo "$GITHUB"
+        env:
+          GITHUB: ${{ toJson(github) }}
